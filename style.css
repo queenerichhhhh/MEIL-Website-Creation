@@ -434,11 +434,56 @@ html {
   }
 }
 
-
-/* Force the navbar logo styling */
 a.nav-logo {
   color: #24456b !important;
   text-decoration: none !important;
   font-weight: 900;
 }
+
+
+.gallery,
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 30px auto;
+    align-items: start;
+}
+
+.gallery img,
+.gallery-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-card,
+.photo-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.project-details {
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+    .gallery,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-details {
+        padding: 20px;
+    }
+}
+
 
